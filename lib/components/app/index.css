@@ -8,12 +8,23 @@
   background-color: var(--color-background);
 }
 
+/**
+ * 1. Fix mobile Safari bug
+ */
+
+.App::after {
+  content: "";
+  display: block;
+  height: 1px; /* 1 */
+}
+
 .App-container {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  position: relative;
 }
 
 .App-container--sm {
@@ -59,16 +70,6 @@
   .App-part--last {
     order: 1;
   }
-}
-
-.App-footer {
-  padding: var(--space-s) var(--viewport-padding);
-  font-size: calc(14rem / var(--base-font-size));
-  background-color: #fff;
-  color: var(--color-pale);
-  border-top: 1px solid var(--color-light);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .App-error {

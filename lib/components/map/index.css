@@ -1,13 +1,24 @@
 /* @define Map */
 
 .Map {
+  flex: 1 0 auto;
   position: relative;
-  width: 100%;
 }
 
-.Map.is-loading {
-  display: flex;
-  align-items: center;
+.Map-container {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.Map-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .Map-recruit {
