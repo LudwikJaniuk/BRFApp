@@ -209,5 +209,7 @@
   "Något gick fel vid inloggningen. Vänligen försök igen.": "Något gick fel vid inloggningen. Vänligen försök igen.",
   "Find cooperative": "Hitta förening",
   "Type here": "Skriv här",
-  "Sorry, we couldn't find any cooperative by that name": "Vi kunde inte hitta någon förening med det namnet"
+  "Sorry, we couldn't find any cooperative by that name": "Vi kunde inte hitta någon förening med det namnet",
+  "Address": "Adress",
+  "Add cooperative": "Lägg till förening"
 }
