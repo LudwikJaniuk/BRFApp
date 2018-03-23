@@ -106,6 +106,7 @@
     "mongoose": "^4.11.12",
     "nanocomponent": "^6.4.2",
     "nanohref": "^3.0.0",
+    "nodemailer": "^4.6.3",
     "object-hash": "^1.1.8",
     "passport": "^0.2.1",
     "passport-oauth2": "^1.4.0",
