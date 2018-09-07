@@ -20,7 +20,7 @@
     "compress:css": "gzip -9 -f -c public/index-$npm_package_version.css > public/index-$npm_package_version.css.gz",
     "compress": "npm run compress:css && npm run compress:js",
     "build:js": "npm run build:js:app && npm run build:js:mapbox && npm run build:js:highcharts",
-    "build:js:app": "browserify lib/app/index.js -t localenvify -t yo-yoify -t babelify -g unassertify -g yo-yoify -g uglifyify | uglifyjs -o public/index-$npm_package_version.js",
+    "build:js:app": "browserify lib/app/index.js -t [localenvify --envfile .env.client-public] -t yo-yoify -t babelify -g unassertify -g yo-yoify -g uglifyify | uglifyjs -o public/index-$npm_package_version.js",
     "build:js:mapbox": "browserify -r mapbox-gl | uglifyjs -o public/mapbox-gl.js",
     "build:js:highcharts": "npm run build:js:highcharts:main && npm run build:js:highcharts:no-data",
     "build:js:highcharts:main": "browserify -r highcharts | uglifyjs -o public/highcharts.js",

@@ -39,7 +39,7 @@ PRISMIC_API=https://brf-energi.cdn.prismic.io/api
 MONGO_URL=mongodb://localhost:27017/brf-energi-dev
 `
 
-readFile('.env').then(content => {
+readFile('.env.client-public').then(content => {
   const keys = Object.keys(parse(content))
   for (const key of Object.keys(parse(DEFAULT))) {
     if (!keys.includes(key)) {
