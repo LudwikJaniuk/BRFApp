@@ -1,0 +1,95 @@
+@import "../base";
+@import "../link";
+
+/** @define List */
+.List {
+  margin: 0;
+  padding: 0;
+}
+
+.List-item {
+  line-height: 1.6;
+}
+
+.List--disc {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+/**
+ * Definition list
+ * @example
+ * <dl class="List List--definition">…</dl>
+ */
+
+.List--definition {
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.List-term {
+  float: left;
+  clear: left;
+  margin-right: 0.5em;
+  margin-bottom: 0.6em;
+  font-weight: var(--font-weight-bold);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.List-term--noDefinition {
+  float: none;
+  display: block;
+  margin-bottom: 0.6em;
+}
+
+.List-definition {
+  margin-bottom: 0.6em;
+  font-weight: var(--font-weight-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.List-definition:last-child {
+  margin-bottom: 0;
+}
+
+.List-definition a {
+  font-weight: var(--font-weight-bold);
+}
+
+/**
+ * Definition list
+ * @example
+ * <ol class="List List--numbered">…</ol>
+ */
+
+.List-content {
+  overflow: hidden;
+}
+
+.List--numbered .List-item  {
+  margin-bottom: var(--space-m);
+}
+
+/**
+ * 1. Verically align with adjacent content
+ */
+
+.List-number {
+  box-sizing: border-box;
+  float: left;
+  min-width: 1.5em;
+  padding-bottom: 0.1em;
+  margin: -0.1em 1em 0 0; /* 1 */
+  color: #fff;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: calc(15rem / var(--base-font-size));
+  background-color: var(--color-gold);
+  border-radius: 1em;
+}
+
+.List-number .List-item:not(:last-child) {
+  margin-bottom: 1.5em;
+}

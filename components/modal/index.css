@@ -1,0 +1,94 @@
+@import "../base";
+
+:root {
+  --Modal-transition-duration: 500ms;
+}
+
+/** @define Modal */
+.Modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 2;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color var(--Modal-transition-duration) linear;
+}
+
+.Modal--placeholder {
+  display: none;
+  background-color: transparent;
+}
+
+:root.has-js .Modal.is-static {
+  display: none;
+}
+
+/**
+ * 1. Fill small viewports
+ * 2. Don't fill beyond small viewports
+ * 3. Allow for overflow scroll
+ */
+
+.Modal-window {
+  height: 100%;
+  width: 100%; /* 1 */
+  max-width: var(--sm-viewport); /* 2 */
+  margin: auto; /* 3 */
+
+  background-color: #fff;
+  overflow: auto;
+
+  animation-name: Modal-window--appear;
+  animation-duration: 500ms;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.175);
+  animation-fill-mode: forwards;
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+  .Modal-window {
+    height: auto;
+    border-radius: 3px;
+  }
+}
+
+.Modal-dismiss {
+  position: absolute;
+  top: var(--space-s);
+  right: var(--space-s);
+}
+
+@keyframes Modal-window--appear {
+  0% {
+    transform: translate(0, -100vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes Modal-window--disappear {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -100vh);
+  }
+}
+
+.Modal.is-disappearing {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.Modal.is-disappearing .Modal-window {
+  animation-name: Modal-window--disappear;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}

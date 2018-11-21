@@ -18,14 +18,13 @@ Configuration variables are read from the file `.env` that is created when insta
 
 ## Running the application
 
-Fire up mongodb and run the appropiate command.
-
 ```bash
-# If mongo is running and environment variables are exported elsewhere
+# Start mongo in local directory (./data)
+$ npm run start:db
+# Start node server
 $ npm start
-
-# Start mongo, server and watch for file changes
-$ npm restart
+# Stop mongo server
+$ npm run stop:db
 ```
 
 ## Running code inspection

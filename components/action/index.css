@@ -1,0 +1,22 @@
+@import "../base";
+
+/** @define Action */
+.Action {
+  line-height: calc(21rem / var(--base-font-size));
+}
+
+.Action-title {
+  font-style: italic;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Action-date {
+  float: right;
+  margin-left: 1em;
+  color: var(--color-dim);
+  font-weight: var(--font-weight-bold);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

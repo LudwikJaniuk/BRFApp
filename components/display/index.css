@@ -1,0 +1,40 @@
+@import "../base";
+
+/** @define Display */
+.Display {
+  display: block;
+  margin: 0 0 0.5em;
+  font-weight: var(--font-weight-bold);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Display--1 {
+  margin: 0 0 0.75em -0.1em;
+  font-size: calc(48rem / var(--base-font-size));
+  line-height: 1;
+  font-weight: var(--font-weight-light);
+}
+
+.Display--2 {
+  margin: 0 0 0.75em -0.1em;
+  font-size: calc(32rem / var(--base-font-size));
+  line-height: 1;
+  font-weight: var(--font-weight-light);
+}
+
+.Display--3 {
+  font-size: calc(28rem / var(--base-font-size));
+}
+
+.Display--4 {
+  font-size: calc(20rem / var(--base-font-size));
+}
+
+.Display--5 {
+  font-size: calc(18rem / var(--base-font-size));
+}
+
+.Display--6 {
+  font-size: calc(16rem / var(--base-font-size));
+}

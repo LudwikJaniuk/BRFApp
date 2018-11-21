@@ -1,0 +1,9 @@
+/**
+ * Import generic CSS-only components statically
+ */
+
+@import "./components/button";
+@import "./components/display";
+@import "./components/link";
+@import "./components/sheet";
+@import "./components/type";

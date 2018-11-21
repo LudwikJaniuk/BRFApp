@@ -1,0 +1,86 @@
+@import "../base";
+
+/** @define View */
+.View {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  height: auto;
+  background-color: var(--color-background);
+}
+
+/**
+ * 1. Fix mobile Safari bug
+ */
+
+.View::after {
+  content: "";
+  display: block;
+  height: 1px; /* 1 */
+}
+
+.View-container {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.View-container--sm {
+  max-width: var(--sm-viewport);
+  padding: 0 var(--viewport-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.View-container--md {
+  max-width: var(--md-viewport);
+  padding: 0 var(--viewport-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.View-container--lg {
+  max-width: var(--lg-viewport);
+  padding: 0 var(--viewport-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.View-part {
+  flex-basis: 100%;
+}
+
+.View-part--primary {
+  width: 100%;
+}
+
+.View-part--secondary {
+  padding: 0 var(--viewport-padding);
+}
+
+@media (--md-viewport), (--lg-viewport) {
+  .View-part--secondary {
+    flex: 1 1 50%;
+    max-width: calc(var(--lg-viewport) / 2);
+    padding: 0 var(--viewport-padding);
+  }
+
+  .View-part--last {
+    order: 1;
+  }
+}
+
+.View-error {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  background-color: var(--color-gold);
+  transition: max-height 250ms linear;
+}
+
+.View-error:empty {
+  max-height: 0;
+}

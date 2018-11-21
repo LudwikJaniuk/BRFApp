@@ -1,0 +1,69 @@
+@import "../base";
+
+/** @define Type */
+.Type {
+  max-width: 100%;
+  line-height: 1.5;
+}
+
+.Type h1 {
+  margin: 1em 0;
+  font-size: calc(24rem / var(--base-font-size));
+}
+
+.Type h2 {
+  margin: 0.75em 0;
+  font-size: calc(18rem / var(--base-font-size));
+}
+
+.Type h3 {
+  margin: 0.5em 0;
+  font-size: calc(16rem / var(--base-font-size));
+}
+
+.Type h4 {
+  margin: 0.5em 0;
+  font-size: calc(14rem / var(--base-font-size));
+}
+
+.Type h5 {
+  margin: 0.5em 0;
+  font-size: calc(12rem / var(--base-font-size));
+}
+
+.Type h6 {
+  margin: 0.5em 0;
+  font-size: calc(10rem / var(--base-font-size));
+  text-transform: uppercase;
+}
+
+.Type h1:first-child,
+.Type h2:first-child,
+.Type h3:first-child,
+.Type h4:first-child,
+.Type h5:first-child,
+.Type h6:first-child {
+  margin-top: 0;
+}
+
+.Type h1:last-child,
+.Type h2:last-child,
+.Type h3:last-child,
+.Type h4:last-child,
+.Type h5:last-child,
+.Type h6:last-child {
+  margin-bottom: 0;
+}
+
+.Type img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Type :link {
+  -webkit-font-smoothing: inherit;
+}
+
+.Type p:not(:first-child):not(:last-child) {
+  margin: 0.7em 0;
+}

@@ -1,0 +1,36 @@
+@import "../base";
+
+/** @define Performance */
+.Performance {
+  margin: 0 2.34375%;
+}
+
+.Performance-graph {
+  width: calc(100% + (2.34375% * 2));
+  margin: 0 0 0.5em;
+  position: relative;
+  left: -2.34375%;
+  pointer-events: none;
+}
+
+.Performance-link {
+  margin-bottom: -0.85em;
+  font-size: calc(14rem / var(--base-font-size));
+}
+
+.Performance-title {
+  text-align: center;
+  font-size: calc(24rem / var(--base-font-size));
+  font-weight: var(--font-weight-bold);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Performance-disclaimer {
+  display: block;
+  margin: var(--space-s) 0;
+  font-size: calc(14rem / var(--base-font-size));
+  color: var(--color-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

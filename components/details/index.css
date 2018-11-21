@@ -1,0 +1,38 @@
+@import "../link";
+
+/** @define Details */
+.Details {
+  display: block;
+}
+
+.Details-summary {
+  display: block;
+  margin: 0 0 0.5em;
+  font-style: italic;
+  outline: none;
+  font-size: calc(20rem / var(--base-font-size));
+  font-weight: var(--font-weight-bold);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Details-summary::-webkit-details-marker { display: none; }
+
+.Details-trigger {
+  display: inline-block;
+  margin-left: 1ch;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.Details.is-open .Details-trigger {
+  display: none;
+}
+
+.Details[open] .Details-trigger--show {
+  display: none;
+}
+
+.Details:not([open]) .Details-trigger--hide {
+  display: none;
+}

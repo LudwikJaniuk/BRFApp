@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
+@import "suitcss-base";
+@import "suitcss-components-grid";
+@import "suitcss-utils-display";
+@import "suitcss-utils-flex";
+@import "suitcss-utils-layout";
+@import "suitcss-utils-link";
+@import "suitcss-utils-position";
+@import "suitcss-utils-size";
+@import "suitcss-utils-space";
+@import "suitcss-utils-text";
+@import "./utilities";
+
+:root {
+  --font-family: "Lato", sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
+  --base-font-size: 16;
+
+  --color-sky: #388ee8;
+  --color-cyan: #19ddc0;
+  --color-gold: #fec73d;
+  --color-tomato: #e83848;
+  --color-background: #f4f7fa;
+  --color-light: #efefef;
+  --color-pale: #c5ccd3;
+  --color-dim: #a8a8a8;
+  --color-dark: #777;
+  --color-text: #222;
+
+  --color-A: #009036;
+  --color-B: #55ab26;
+  --color-C: #c8d200;
+  --color-D: #ffed00;
+  --color-E: #fbba00;
+  --color-F: #eb6909;
+  --color-G: #e2001a;
+  --color-unknown: #bbb;
+
+  --sm-viewport: 480px;
+  --md-viewport: 800px;
+  --lg-viewport: 1280px;
+
+  --viewport-padding: 2vw;
+  --Grid-gutter-size: var(--viewport-padding);
+
+  --space-n: 0;
+  --space-b: calc(10rem / var(--base-font-size));
+  --space-s: calc(14rem / var(--base-font-size));
+  --space-m: calc(24rem / var(--base-font-size));
+  --space-l: calc(40rem / var(--base-font-size));
+  --space-g: calc(50rem / var(--base-font-size));
+}
+
+@custom-media --sm-viewport (min-width:480px) and (max-width:799px);
+@custom-media --md-viewport (min-width:800px) and (max-width:1280px);
+@custom-media --lg-viewport (min-width:1280px);
+
+html,
+body {
+  height: 100%;
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: calc(0.9px * var(--base-font-size));
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+  html,
+  body {
+    font-size: calc(1px * var(--base-font-size));
+  }
+}
+
+/**
+ * 1. Lightly lighten default bolded text
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+dt {
+  -webkitfont-smoothing: antialiased; /* 1 */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:link,
+:visited {
+  text-decoration: none;
+  font-style: italic;
+  color: var(--color-sky);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:visited {
+  color: #ae38e8;
+}
+
+/**
+ * 1. Don't colorize visited internal links
+ */
+
+[href^="#"],
+[href^="/"] {
+  color: var(--color-sky); /* 1 */
+}
+
+:link:hover,
+:link:active {
+  text-decoration: underline;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.075);
+}

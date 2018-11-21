@@ -110,5 +110,18 @@
   "Shared laundry room": "Shared laundry room",
   "Garage": "Garage",
   "METRY_ERROR": "Something went wrong when signing you in. Please try again.",
-  "Cooperative not found": "Cooperative not found"
+  "Cooperative not found": "Cooperative not found",
+  "Cannot read property 'toString' of undefined": "Cannot read property 'toString' of undefined",
+  "Could not find page": "Could not find page",
+  "Energy initiatives": "Energy initiatives",
+  "No energy actions": "No energy actions",
+  "Missing your cooperative?": "Missing your cooperative?",
+  "Add your cooperative": "Add your cooperative",
+  "Search and filter": "Search and filter",
+  "Oops!": "Oops!",
+  "An unforseen error has occured. It might be temporary and you could": "An unforseen error has occured. It might be temporary and you could",
+  "try again": "try again",
+  "or go to": "or go to",
+  "the homepage": "the homepage",
+  "An error has occured": "An error has occured"
 }
